@@ -14,16 +14,13 @@ unsigned long previousMillishold = 0;
 unsigned int cycle = 0;
 byte mode = 0;
 #define n_modes 3
-//boolean reverse = false;
 
 void setup() {
   strip.begin();
-  //strip.show(); // Initialize all pixels to 'off'
   pinMode(3, INPUT);
   pinMode(0, INPUT_PULLUP);
   pinMode(1, OUTPUT);
   randomSeed(analogRead(3));
-  //strip.setBrightness(160);
   strip.setBrightness(128);
   strip.show();
 
@@ -51,7 +48,6 @@ void loop() {
       digitalWrite(1,0);
       strip.setPixelColor(random(strip.numPixels()), Wheel(random(64)+96));
     }
-    //strip.setPixelColor(random(strip.numPixels()),0x000000);
    
     if (pressed){
     healing = !healing;
@@ -63,7 +59,6 @@ void loop() {
     break;
   case 1:
     strip.setPixelColor((cycle+random(3))%64, Wheel(((((cycle+random(5))%32)+48+random(7))%256)));
-    //strip.setPixelColor(random(strip.numPixels()),0x000000);
     break;
   case 2:
   
@@ -74,9 +69,6 @@ void loop() {
       allStrip(0x0000FF);
     if ((cycle+10)%20 == 0)
     allStrip(0x000000);
-  
-    
-    //strip.setPixelColor(random(strip.numPixels()),0x000000);
     break;
   }
 
@@ -124,10 +116,7 @@ void buttonCheck(){
   lastButtonState = buttonState;
 }
 
-
 uint32_t Wheel(byte WheelPos) {
-
-  //Wheel(WheelPos,0,255);
   if(WheelPos < 85) {
     return strip.Color(WheelPos * 3, 255 - WheelPos * 3, 0);
   } 
