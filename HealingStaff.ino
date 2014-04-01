@@ -3,7 +3,7 @@
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(48, PIN, NEO_GRB + NEO_KHZ800);
 
-byte buttonPushCounter = 1;   // counter for the number of button presses
+byte buttonPushCounter = 0;   // counter for the number of button presses
 boolean buttonState = 0;         // current state of the button
 boolean lastButtonState = 1;     // previous state of the button
 boolean pressed = false;
@@ -12,7 +12,7 @@ unsigned long previousMillis = 0;
 unsigned long previousMillishold = 0;
 #define interval 30000 //30 sec
 unsigned int cycle = 0;
-byte mode = 2;
+byte mode = 0;
 #define n_modes 3
 //boolean reverse = false;
 
