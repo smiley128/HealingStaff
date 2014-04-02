@@ -58,7 +58,7 @@ void loop() {
   }
     break;
   case 1:
-    strip.setPixelColor((cycle+random(3))%64, Wheel(((((cycle+random(5))%32)+48+random(7))%256)));
+    strip.setPixelColor((cycle+random(3))%64, Wheel(((((cycle+random(5))%32)+strip.numPixels()+random(7))%256)));
     break;
   case 2:
   
