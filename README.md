@@ -4,9 +4,9 @@ HealingStaff
 Arduino sketch for my NeoPixel LED "Healing" timer staff.
 
 ##Pin configuration
--Pin 0: Button
--Pin 1: LED (onboard LED on the trinket)
--Pin 2: NeoPixel strip
+- Pin 0: Button
+- Pin 1: LED (onboard LED on the trinket)
+- Pin 2: NeoPixel strip
 
 ##How to use
 When the sketch starts it begins in a rainbow standby pattern, just push the button to start the timer. The LED will turn on and the NeoPixel strip will start to become more and more green as the timer progresses when the time is up the NeoPixel strip will turn back to it pink/purple standby pattern.
