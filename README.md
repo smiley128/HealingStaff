@@ -14,7 +14,7 @@ When the sketch starts it begins in a rainbow standby pattern, just push the but
 While the timer is going the button can be pushed at any time to reset the timer and return to the pink/purple standby pattern.
 
 ###Extra patterns
-There's a number of extra patterns that can be accessed buy holding down the button for 2 seconds, but note this takes it out of standby-healing mode and to return to the standby-healing mode you need to ether reset the microcontroller or cycle through them until you get back to standby-healing mode. At the moment there is on 2 extra patterns.
+There's a number of extra patterns that can be accessed buy holding down the button for 2 seconds, but note this takes it out of standby-healing mode and to return to the standby-healing mode you need to ether reset the microcontroller or cycle through them until you get back to standby-healing mode. At the moment there is only 2 extra patterns.
 
 ##Dependencies
 [Adafruit NeoPixel][neopixel] library 
