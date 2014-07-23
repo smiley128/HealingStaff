@@ -3,12 +3,11 @@
 #define ButtonPin 0
 #define LEDpin 1
 #define NeoPixelPin 2
+#define nPixels 48 // Number of NeoPixels
 #define Brightness 128 // Brightness (For all modes except mode 2 'All White')
 #define HoldTime 1500 // Button hold time to change modes
 #define interval 30000 // Interval for healing 30 sec
 #define GlobalTickDelay 4 //The length of time between each loop
-
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(48, NeoPixelPin, NEO_GRB + NEO_KHZ800);
 
 #define n_modes 4 // number of modes 
 boolean buttonState = 0;         // current state of the button
@@ -19,6 +18,8 @@ unsigned long previousMillis = 0;
 unsigned long previousMillishold = 0;
 unsigned long cycle = 0; 
 byte mode = 0;
+
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(nPixels, NeoPixelPin, NEO_GRB + NEO_KHZ800);
 
 void setup() {
   strip.begin();
