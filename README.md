@@ -1,6 +1,5 @@
-HealingStaff
+HealingStaff 1.0 (Warlock)
 ============
-
 Arduino sketch for my NeoPixel LED "Healing" timer staff.
 
 ##Pin configuration
